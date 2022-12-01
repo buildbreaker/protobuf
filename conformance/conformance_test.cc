@@ -111,7 +111,7 @@ ConformanceTestSuite::ConformanceRequestSetting::ConformanceRequestSetting(
     default:
       GOOGLE_LOG(FATAL) << "Unspecified input format";
   }
-
+  request.set_test_name(test_name)
   request_.set_test_category(test_category);
 
   request_.set_message_type(prototype_message.GetDescriptor()->full_name());
